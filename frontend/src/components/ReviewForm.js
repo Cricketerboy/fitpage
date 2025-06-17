@@ -38,7 +38,7 @@ const ReviewForm = ({ productId }) => {
       <input
         type="text"
         name="userId"
-        placeholder="User ID"
+        placeholder="User Name"
         onChange={handleChange}
       />
       <input
