@@ -11,7 +11,7 @@ Built with **React.js**, **Node.js + Express**, **Sequelize**, and **SQLite** (f
 
 ---
 
-## 🚀 Tech Stack
+## Tech Stack
 
 - **React.js** – frontend
 - **Node.js + Express.js** – backend REST APIs
@@ -21,7 +21,35 @@ Built with **React.js**, **Node.js + Express**, **Sequelize**, and **SQLite** (f
 
 ---
 
-## ⚙️ Setup Instructions
+## Database Schema
+
+**Product Table**
+
+| Column      | Type      | Constraints                | Description         |
+| ----------- | --------- | -------------------------- | ------------------- |
+| `id`        | INTEGER   | PRIMARY KEY, AUTOINCREMENT | Unique product ID   |
+| `name`      | STRING    | NOT NULL                   | Name of the product |
+| `createdAt` | TIMESTAMP | Auto-managed by Sequelize  | Creation timestamp  |
+| `updatedAt` | TIMESTAMP | Auto-managed by Sequelize  | Update timestamp    |
+
+**Review Table**
+
+| Column       | Type      | Constraints                      | Description                   |
+| ------------ | --------- | -------------------------------- | ----------------------------- |
+| `id`         | INTEGER   | PRIMARY KEY, AUTOINCREMENT       | Unique review ID              |
+| `productId`  | INTEGER   | FOREIGN KEY → Products(`id`)     | Associated product            |
+| `userId`     | STRING    | NOT NULL                         | User who submitted the review |
+| `rating`     | INTEGER   | Optional (1–5), CHECK constraint | Rating given (1 to 5)         |
+| `reviewText` | TEXT      | Optional                         | Text review                   |
+| `photoUrl`   | STRING    | Optional                         | URL to optional image         |
+| `createdAt`  | TIMESTAMP | Auto-managed by Sequelize        | Review creation timestamp     |
+| `updatedAt`  | TIMESTAMP | Auto-managed by Sequelize        | Review update timestamp       |
+
+
+---
+
+
+## Setup Instructions
 
 ### 1. Clone the Repository
 
