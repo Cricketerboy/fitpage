@@ -1,0 +1,12 @@
+.product-card {
+  border: 1px solid #ddd;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.review {
+  padding: 8px 0;
+  border-top: 1px solid #eee;
+}
