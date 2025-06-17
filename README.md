@@ -26,4 +26,4 @@ Built with **React.js**, **Node.js + Express**, **Sequelize**, and **SQLite** (f
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/ratings-review-app.git
+git clone https://github.com/Cricketerboy/fitpage.git
